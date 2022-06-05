@@ -53,6 +53,20 @@ int main()
 		print(crlf);
 		print(crlf);
 	}
+	{
+		// ask a number, entered as string and convertd to a short
+		constexpr unsigned char size = 5;
+		unsigned char num[size]{0};
+		read(num, size);
+		unsigned short time = strToShort(num);
+
+		for (unsigned char t = 0; t < time; t++)
+		{
+			print(crlf);
+			print("kanzer pa los putos polis y pal amo del puto kurro too!");
+		}
+	}
+
 
 	while ( !_kbhit() )
 		;

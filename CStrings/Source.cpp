@@ -74,6 +74,23 @@ int main()
 		print(crlf);
 		print(bufout);
 	}
+	{
+		// Fibonacci recursivo !!!
+		constexpr unsigned short sizeInBuf = 4;
+		unsigned char inbuf[sizeInBuf]{ 0 };
+		constexpr unsigned short sizeOutBuf = 36;
+		char outbuf[sizeOutBuf]{ 0 };
+		unsigned long long num;
+		print(crlf);
+		print("Write a number not too big:   ");
+		read(inbuf, sizeInBuf);
+		num = strToLongLong(inbuf);
+		unsigned long long fib = fibonacci(num);
+		longlongToStr(fib, outbuf);
+		print(crlf);
+		print(outbuf);
+
+	}
 
 	while ( !_kbhit() )
 		;

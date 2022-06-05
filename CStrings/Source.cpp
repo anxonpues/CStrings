@@ -66,7 +66,14 @@ int main()
 			print("kanzer pa los putos polis y pal amo del puto kurro too!");
 		}
 	}
-	// falta hacer llamada a shortToStr
+	{
+		// falta hacer llamada a shortToStr
+		unsigned short prb = 35017;
+		char bufout[12]{ 0 };
+		shortToStr(prb, bufout);
+		print(crlf);
+		print(bufout);
+	}
 
 	while ( !_kbhit() )
 		;

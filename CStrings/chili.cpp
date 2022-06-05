@@ -63,7 +63,7 @@ unsigned short strToShort(const unsigned char* str)
 	}
 	return usi;
 }
-void shortToStr(const unsigned short value, unsigned char* outstr)
+void shortToStr(const unsigned short value, char* outstr)
 {
 	// first look how many digits has
 	unsigned char digits = 0;
@@ -75,10 +75,14 @@ void shortToStr(const unsigned short value, unsigned char* outstr)
 		val = val / 10;
 	}
 	val = value;
-	for (unsigned char i = digits - 1; i >=0 ; i--)
+	for (unsigned char i = 0; i < digits ; i++)		//	esto que sigue es txapuzero no me gusta
 	{
-		*outstr = val / (10 ^ i)+'0';
-		val = val % (10 ^ i);
+		unsigned short div = 1;
+		for (unsigned short j = digits -i; j>1 ; j--)
+			div *= 10;
+		*outstr = val / div +'0';
+		outstr++;
+		val = val % div;
 	}
 	*outstr = 0;
 }

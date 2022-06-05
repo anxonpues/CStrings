@@ -89,7 +89,6 @@ int main()
 		longlongToStr(fib, outbuf);
 		print(crlf);
 		print(outbuf);
-
 	}
 
 	while ( !_kbhit() )

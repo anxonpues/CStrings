@@ -111,14 +111,14 @@ void longlongToStr(const unsigned long long value, char* outstr)
 	while (val)
 	{
 		digits++;
-		val = val / 10;
+		val = val / 10uLL;
 	}
 	val = value;
 	for (unsigned char i = 0; i < digits; i++)		//	esto que sigue es txapuzero no me gusta
 	{
-		unsigned short div = 1;
+		unsigned short div = 1uLL;
 		for (unsigned short j = digits - i; j > 1; j--)
-			div *= 10;
+			div *= 10uLL;
 		*outstr = val / div + '0';
 		outstr++;
 		val = val % div;
@@ -128,11 +128,9 @@ void longlongToStr(const unsigned long long value, char* outstr)
 
 unsigned long long fibonacci(unsigned long long num)
 {
-	if (num == 1)
-		return 1;
-	else if (num == 2)
-		return 1;
+	if (num < 2uLL)
+		return num;
 	else
-		return fibonacci(num - 1) + fibonacci(num - 2);
+		return fibonacci(num - 1uLL) + fibonacci(num - 2uLL);
 	return 0;
 }

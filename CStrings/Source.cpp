@@ -66,7 +66,7 @@ int main()
 			print("kanzer pa los putos polis y pal amo del puto kurro too!");
 		}
 	}
-
+	// falta hacer llamada a shortToStr
 
 	while ( !_kbhit() )
 		;

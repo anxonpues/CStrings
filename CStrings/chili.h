@@ -7,5 +7,6 @@ void print(const char* s);
 void read(char* buf, const unsigned char bufS);
 void read(unsigned char* buf, const unsigned char bufS);
 void read(char* buf, const unsigned short bufSize);
-unsigned short strToShort(unsigned char* str);
+unsigned short strToShort(const unsigned char* str);
+void shortToStr(const unsigned short value, unsigned char* outstr);
 
